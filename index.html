@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Chat Bot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #0f1729;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .chat-container {
+        width: 460px;
+        background: #fff;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(245, 241, 241, 0.3);
+      }
+      .chat-header {
+        padding: 12px;
+        background: #2563eb;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .chat-messages {
+        flex: 1;
+        padding: 12px;
+        overflow-y: auto;
+        background: #f9fafb;
+      }
+      .message {
+        margin-bottom: 10px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        max-width: 80%;
+        font-size: 14px;
+      }
+      .user {
+        background: #2563eb;
+        color: #fff;
+        margin-left: auto;
+      }
+      .bot {
+        background: #e5e7eb;
+        color: #111827;
+        margin-right: auto;
+      }
+      .chat-input {
+        display: flex;
+        border-top: 1px solid #e5e7eb;
+      }
+      .chat-input input {
+        flex: 1;
+        border: none;
+        padding: 10px;
+        outline: none;
+      }
+      .chat-input button {
+        border: none;
+        padding: 10px 14px;
+        background: #2563eb;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">CurHead - Tempat Curhat kamu</div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">Hai, may i assist you?</div>
+      </div>
+      <div class="chat-input">
+        <input id="userInput" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
